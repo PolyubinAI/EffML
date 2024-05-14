@@ -8,7 +8,7 @@ import torch.nn as nn
 
 
 OPS = {
-    'none': lambda in_size, out_size, dropout, affine: Zero(in_size),
+    'none': lambda in_size, out_size, dropout, affine: Zero(),
     'MLP_Relu': lambda in_size, out_size, dropout, affine: MLP(in_size, out_size, nn.ReLU(), dropout, affine),
     'MLP_Tanh': lambda in_size, out_size, dropout, affine: MLP(in_size, out_size, nn.Tanh(), dropout, affine),
     'MLP_Sigmoid': lambda in_size, out_size,dropout, affine: MLP(in_size, out_size, nn.Sigmoid(), dropout, affine),
@@ -124,11 +124,11 @@ class Zero(nn.Module):
 
 class MixedOp(nn.Module):
     """ Mixed operation """
-    def __init__(self, in_size, out_size, dropout,):
+    def __init__(self, in_size, out_size,):
         super().__init__()
         self._ops = nn.ModuleList()
         for primitive in gt.PRIMITIVES:
-            op = OPS[primitive](in_size, out_size, affine=False)
+            op = OPS[primitive](in_size, out_size, dropout=True, affine=False)
             self._ops.append(op)
 
     def forward(self, x, weights):
