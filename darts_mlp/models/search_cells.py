@@ -24,11 +24,12 @@ class SearchCell(nn.Module):
 
         # If previous cell is reduction cell, current input size does not match with
         # output size of cell[k-2]. So the output[k-2] should be reduced by preprocessing.
-        # if reduction_p:
-        #     self.preproc0 = ops.FactorizedReduce(C_pp, C, affine=False)
-        # else:
-        #     self.preproc0 = ops.StdConv(C_pp, C, 1, 1, 0, affine=False)
-        # self.preproc1 = ops.StdConv(C_p, C, 1, 1, 0, affine=False)
+
+        if reduction_p:
+            self.preproc0 = ops.FactorizedReduce(in_pp, in_p, affine=False)
+        else:
+            self.preproc0 = ops.MLP(in_p, in_p, activation=nn.ReLU(), affine=False)
+        self.preproc1 = ops.MLP(in_p, in_p, affine=False, activation=nn.ReLU())
 
         # generate dag
         self.dag = nn.ModuleList()
@@ -36,17 +37,18 @@ class SearchCell(nn.Module):
             self.dag.append(nn.ModuleList())
             for j in range(2+i): # include 2 input nodes
                 # reduction should be used only for input node
+                # k = i if i != 0 else 1
                 op = ops.MixedOp(in_p, in_cur)
+                # op = ops.MixedOp(in_p, in_cur, multiplier=(max(j-1, 1)))
                 self.dag[i].append(op)
 
     def forward(self, s0, s1, w_dag):
-        # s0 = self.preproc0(s0)
-        # s1 = self.preproc1(s1)
+        s0 = self.preproc0(s0)
+        s1 = self.preproc1(s1)
 
         states = [s0, s1]
         for edges, w_list in zip(self.dag, w_dag):
             s_cur = sum(edges[i](s, w) for i, (s, w) in enumerate(zip(states, w_list)))
             states.append(s_cur)
-
         s_out = torch.cat(states[2:], dim=1)
         return s_out

@@ -64,7 +64,10 @@ def parse(alpha, k):
     """
     parse continuous alpha to discrete gene.
     alpha is ParameterList:
-    ParameterList [
+    ParameterList [    # 'MLP_Tanh': lambda in_size, out_size, dropout, affine: MLP(in_size, out_size, nn.Tanh(), dropout, affine),
+    # 'MLP_Sigmoid': lambda in_size, out_size,dropout, affine: MLP(in_size, out_size, nn.Sigmoid(), dropout, affine),
+    # 'MLP_Gelu':  lambda in_size, out_size,dropout, affine: MLP(in_size, out_size, nn.GELU(), dropout, affine),
+    # 'skip_connect': lambda in_size, out_size, dropout, affine: nn.Identity() if in_size == out_size else nn.Linear(in_size, out_size),
         Parameter(n_edges1, n_ops),
         Parameter(n_edges2, n_ops),
         ...

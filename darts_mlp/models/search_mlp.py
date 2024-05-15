@@ -6,6 +6,7 @@ from models.search_cells import SearchCell
 import genotypes as gt
 from torch.nn.parallel._functions import Broadcast
 import logging
+from models.ops import TabDLModel
 
 
 def broadcast_list(l, device_ids):
@@ -18,7 +19,7 @@ def broadcast_list(l, device_ids):
 
 class SearchMLP(nn.Module):
     """ Search CNN model """
-    def __init__(self, in_size, out_size, n_classes, n_layers, n_nodes=4):
+    def __init__(self, in_size, out_size, n_classes, n_count_features, n_layers, n_nodes=1):
         """
         Args:
             in_size: # of input
@@ -32,40 +33,55 @@ class SearchMLP(nn.Module):
         self.out_size = out_size
         self.n_classes = n_classes
         self.n_layers = n_layers
+        self.linear_first = nn.Linear(8, in_size)
 
+        # self.net = TabDLModel(n_count_features, [], {
+        #                     "d_layers": [384, 384],
+        #                     "dropouts": [0.4, 0.4],
+        #                     "activation": nn.ReLU,
+        #                     "d_out": in_size,
+        #                   }, "MLP",
+        #                   nn.ReLU())
+        
         # for the first cell, stem is used for both s0 and s1
         # [!] C_pp and C_p is output channel size, but C_cur is input channel size.
-        in_pp, in_p, in_cur = in_size, in_size, in_size
+        in_pp, in_p, in_cur =  in_size, in_size, out_size
 
         self.cells = nn.ModuleList()
         reduction_p = False
         for i in range(n_layers):
             # Reduce featuremap size and double channels in 1/3 and 2/3 layer.
-            if i in [n_layers//3, 2*n_layers//3]:
+            if i in [n_layers // 3, 2 * n_layers // 3]:
                 in_cur *= 2
                 reduction = True
             else:
                 reduction = False
-
             cell = SearchCell(n_nodes, in_pp, in_p, in_cur, reduction_p, reduction)
             reduction_p = reduction
             self.cells.append(cell)
+ 
             cur_out = in_cur * n_nodes
-            in_pp, in_p = in_p, cur_out
+            in_pp, in_p, in_cur = in_p, in_cur, cur_out
+        
+        self.linear = nn.Linear(in_cur, 1)
 
-    def forward(self, x, weights_normal, weights_reduce):
+    def forward(self, x, weights_normal, weights_reduce):  
+        x = self.linear_first(x)
         s0 = s1 = x
+
 
         for cell in self.cells:
             weights = weights_reduce if cell.reduction else weights_normal
+
             s0, s1 = s1, cell(s0, s1, weights)
 
+        s1 = self.linear(s1).squeeze()
         return s1
 
 
-class SearchCNNController(nn.Module):
+class SearchController(nn.Module):
     """ SearchCNN controller supporting multi-gpu """
-    def __init__(self, in_size, out_size, n_classes, n_layers, criterion, n_nodes=4, device_ids=None):
+    def __init__(self, in_size, out_size, n_count_features, n_classes, n_layers, criterion, n_nodes=1, device_ids=None):
         super().__init__()
         self.n_nodes = n_nodes
         self.criterion = criterion
@@ -89,7 +105,7 @@ class SearchCNNController(nn.Module):
             if 'alpha' in n:
                 self._alphas.append((n, p))
 
-        self.net = SearchMLP(in_size, out_size, n_classes, n_layers, n_nodes)
+        self.net = SearchMLP(in_size, out_size, n_classes, n_count_features, n_layers, n_nodes)
 
     def forward(self, x):
         weights_normal = [F.softmax(alpha, dim=-1) for alpha in self.alpha_normal]
@@ -113,6 +129,8 @@ class SearchCNNController(nn.Module):
 
     def loss(self, X, y):
         logits = self.forward(X)
+
+
         return self.criterion(logits, y)
 
     def print_alphas(self, logger):

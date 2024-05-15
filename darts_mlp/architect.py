@@ -32,18 +32,17 @@ class Architect():
         """
         # forward & calc loss
         loss = self.net.loss(trn_X, trn_y) # L_trn(w)
+    # loss.backward()
+    # w_optim.step()
 
-        # compute gradient
-        gradients = torch.autograd.grad(loss, self.net.weights())
-
-        # do virtual step (update gradient)
-        # below operations do not need gradient tracking
+    # compute gradient
+        gradients = torch.autograd.grad(loss, self.net.weights(), allow_unused=True)
         with torch.no_grad():
             # dict key is not the value, but the pointer. So original network weight have to
             # be iterated also.
             for w, vw, g in zip(self.net.weights(), self.v_net.weights(), gradients):
                 m = w_optim.state[w].get('momentum_buffer', 0.) * self.w_momentum
-                vw.copy_(w - xi * (m + g + self.w_weight_decay*w))
+                vw.copy_(w - xi * (m + g + self.w_weight_decay * w))
 
             # synchronize alphas
             for a, va in zip(self.net.alphas(), self.v_net.alphas()):
@@ -56,15 +55,15 @@ class Architect():
             w_optim: weights optimizer - for virtual step
         """
         # do virtual step (calc w`)
-        self.virtual_step(trn_X, trn_y, xi, w_optim)
 
+        self.virtual_step(trn_X, trn_y, xi, w_optim)
         # calc unrolled loss
         loss = self.v_net.loss(val_X, val_y) # L_val(w`)
 
         # compute gradient
         v_alphas = tuple(self.v_net.alphas())
         v_weights = tuple(self.v_net.weights())
-        v_grads = torch.autograd.grad(loss, v_alphas + v_weights)
+        v_grads = torch.autograd.grad(loss, v_alphas + v_weights, allow_unused=True)
         dalpha = v_grads[:len(v_alphas)]
         dw = v_grads[len(v_alphas):]
 

@@ -131,7 +131,7 @@ def get_data(dataset_name, batch_size, num_workers):
         )
 
     return {
-    'train': dataloader_train,
+    'train': (dataloader_train, n_cont_features),
     'val': dataloader_val,
     'test': dataloader_test
 }
@@ -184,6 +184,7 @@ class AverageMeter():
 
 def accuracy(output, target, topk=(1,)):
     """ Computes the precision@k for the specified values of k """
+
     maxk = max(topk)
     batch_size = target.size(0)
 
