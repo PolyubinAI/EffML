@@ -56,8 +56,8 @@ def main():
     
 
     net_crit = nn.MSELoss().to(device)
-    model = SearchController(in_size=384, out_size=384, n_count_features=dataloaders['train'][1], n_classes=1, 
-                                n_layers=8, criterion=net_crit, n_nodes=1, device_ids=config.gpus)
+    model = SearchController(in_size=32, out_size=32, n_count_features=dataloaders['train'][1], n_classes=1, 
+                                n_layers=8, criterion=net_crit, n_nodes=2, device_ids=config.gpus)
     model = model.to(device)
 
     # weights optimizer

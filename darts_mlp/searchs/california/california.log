@@ -11793,3 +11793,147 @@ tensor([[0.1667, 0.1666, 0.1664, 0.1669, 0.1668, 0.1667],
 05/15 07:22:31 PM | genotype = Genotype(normal=[[('skip_connect', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
 05/15 07:22:48 PM | genotype = Genotype(normal=[[('skip_connect', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
 05/15 07:23:05 PM | genotype = Genotype(normal=[[('skip_connect', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:23:22 PM | genotype = Genotype(normal=[[('skip_connect', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:23:39 PM | genotype = Genotype(normal=[[('skip_connect', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:23:56 PM | genotype = Genotype(normal=[[('skip_connect', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:24:13 PM | genotype = Genotype(normal=[[('skip_connect', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:24:30 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:24:47 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:25:04 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:25:21 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:25:38 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:25:55 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:26:12 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:26:29 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:26:45 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:27:02 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:27:19 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:27:35 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:27:52 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:28:09 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:28:26 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:28:43 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:29:00 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:29:17 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('MLP_Tanh', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:29:34 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('skip_connect', 0)]], normal_concat=range(2, 3), reduce=[[('MLP_Tanh', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:29:51 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:30:08 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('MLP_Tanh', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:30:25 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('MLP_Tanh', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:30:42 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:30:58 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('MLP_Tanh', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:31:15 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('MLP_Tanh', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:31:31 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:31:48 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:32:05 PM | genotype = Genotype(normal=[[('MLP_Tanh', 1), ('MLP_Relu', 0)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:32:22 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:32:39 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:32:56 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:33:13 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:33:30 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:33:48 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:34:04 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:34:21 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:34:39 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:34:55 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:35:12 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:35:29 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:35:46 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:36:03 PM | genotype = Genotype(normal=[[('MLP_Relu', 0), ('MLP_Tanh', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('skip_connect', 1)]], reduce_concat=range(2, 3))
+05/15 07:36:04 PM | Final best Prec@1 = 246.0297%
+05/15 07:36:04 PM | Best Genotype = Genotype(normal=[[('skip_connect', 0), ('skip_connect', 1)]], normal_concat=range(2, 3), reduce=[[('skip_connect', 0), ('MLP_Relu', 1)]], reduce_concat=range(2, 3))
+05/15 07:39:40 PM | 
+05/15 07:39:40 PM | Parameters:
+05/15 07:39:40 PM | ALPHA_LR=0.0003
+05/15 07:39:40 PM | ALPHA_WEIGHT_DECAY=0.001
+05/15 07:39:40 PM | BATCH_SIZE=64
+05/15 07:39:40 PM | DATA_PATH=./data/
+05/15 07:39:40 PM | DATASET_NAME=california
+05/15 07:39:40 PM | EPOCHS=100
+05/15 07:39:40 PM | GPUS=[1]
+05/15 07:39:40 PM | INIT_CHANNELS=16
+05/15 07:39:40 PM | LAYERS=8
+05/15 07:39:40 PM | NAME=california
+05/15 07:39:40 PM | NUM_WORKERS=4
+05/15 07:39:40 PM | PATH=searchs/california
+05/15 07:39:40 PM | PLOT_PATH=searchs/california/plots
+05/15 07:39:40 PM | PRINT_FREQ=50
+05/15 07:39:40 PM | SEED=2
+05/15 07:39:40 PM | W_GRAD_CLIP=5.0
+05/15 07:39:40 PM | W_LR=0.025
+05/15 07:39:40 PM | W_LR_MIN=0.001
+05/15 07:39:40 PM | W_MOMENTUM=0.9
+05/15 07:39:40 PM | W_WEIGHT_DECAY=0.0003
+05/15 07:39:40 PM | 
+05/15 07:39:40 PM | Logger is set - training start
+05/15 07:43:29 PM | 
+05/15 07:43:29 PM | Parameters:
+05/15 07:43:29 PM | ALPHA_LR=0.0003
+05/15 07:43:29 PM | ALPHA_WEIGHT_DECAY=0.001
+05/15 07:43:29 PM | BATCH_SIZE=64
+05/15 07:43:29 PM | DATA_PATH=./data/
+05/15 07:43:29 PM | DATASET_NAME=california
+05/15 07:43:29 PM | EPOCHS=100
+05/15 07:43:29 PM | GPUS=[1]
+05/15 07:43:29 PM | INIT_CHANNELS=16
+05/15 07:43:29 PM | LAYERS=8
+05/15 07:43:29 PM | NAME=california
+05/15 07:43:29 PM | NUM_WORKERS=4
+05/15 07:43:29 PM | PATH=searchs/california
+05/15 07:43:29 PM | PLOT_PATH=searchs/california/plots
+05/15 07:43:29 PM | PRINT_FREQ=50
+05/15 07:43:29 PM | SEED=2
+05/15 07:43:29 PM | W_GRAD_CLIP=5.0
+05/15 07:43:29 PM | W_LR=0.025
+05/15 07:43:29 PM | W_LR_MIN=0.001
+05/15 07:43:29 PM | W_MOMENTUM=0.9
+05/15 07:43:29 PM | W_WEIGHT_DECAY=0.0003
+05/15 07:43:29 PM | 
+05/15 07:43:29 PM | Logger is set - training start
+05/15 07:44:10 PM | 
+05/15 07:44:10 PM | Parameters:
+05/15 07:44:10 PM | ALPHA_LR=0.0003
+05/15 07:44:10 PM | ALPHA_WEIGHT_DECAY=0.001
+05/15 07:44:10 PM | BATCH_SIZE=64
+05/15 07:44:10 PM | DATA_PATH=./data/
+05/15 07:44:10 PM | DATASET_NAME=california
+05/15 07:44:10 PM | EPOCHS=100
+05/15 07:44:10 PM | GPUS=[1]
+05/15 07:44:10 PM | INIT_CHANNELS=16
+05/15 07:44:10 PM | LAYERS=8
+05/15 07:44:10 PM | NAME=california
+05/15 07:44:10 PM | NUM_WORKERS=4
+05/15 07:44:10 PM | PATH=searchs/california
+05/15 07:44:10 PM | PLOT_PATH=searchs/california/plots
+05/15 07:44:10 PM | PRINT_FREQ=50
+05/15 07:44:10 PM | SEED=2
+05/15 07:44:10 PM | W_GRAD_CLIP=5.0
+05/15 07:44:10 PM | W_LR=0.025
+05/15 07:44:10 PM | W_LR_MIN=0.001
+05/15 07:44:10 PM | W_MOMENTUM=0.9
+05/15 07:44:10 PM | W_WEIGHT_DECAY=0.0003
+05/15 07:44:10 PM | 
+05/15 07:44:10 PM | Logger is set - training start
+05/15 07:45:12 PM | 
+05/15 07:45:12 PM | Parameters:
+05/15 07:45:12 PM | ALPHA_LR=0.0003
+05/15 07:45:12 PM | ALPHA_WEIGHT_DECAY=0.001
+05/15 07:45:12 PM | BATCH_SIZE=64
+05/15 07:45:12 PM | DATA_PATH=./data/
+05/15 07:45:12 PM | DATASET_NAME=california
+05/15 07:45:12 PM | EPOCHS=100
+05/15 07:45:12 PM | GPUS=[1]
+05/15 07:45:12 PM | INIT_CHANNELS=16
+05/15 07:45:12 PM | LAYERS=8
+05/15 07:45:12 PM | NAME=california
+05/15 07:45:12 PM | NUM_WORKERS=4
+05/15 07:45:12 PM | PATH=searchs/california
+05/15 07:45:12 PM | PLOT_PATH=searchs/california/plots
+05/15 07:45:12 PM | PRINT_FREQ=50
+05/15 07:45:12 PM | SEED=2
+05/15 07:45:12 PM | W_GRAD_CLIP=5.0
+05/15 07:45:12 PM | W_LR=0.025
+05/15 07:45:12 PM | W_LR_MIN=0.001
+05/15 07:45:12 PM | W_MOMENTUM=0.9
+05/15 07:45:12 PM | W_WEIGHT_DECAY=0.0003
+05/15 07:45:12 PM | 
+05/15 07:45:12 PM | Logger is set - training start
